@@ -1,0 +1,331 @@
+/* Casa Ascendente - Family Legacy Website */
+/* Ascendemos Siempre */
+
+:root {
+    --gold: #D4AF37;
+    --gold-light: #F4E4BC;
+    --gold-dark: #996515;
+    --black: #0A0A0A;
+    --black-soft: #1A1A1A;
+    --white: #FAFAFA;
+    --white-soft: #E8E8E8;
+    --font-display: 'Cinzel', serif;
+    --font-body: 'Cormorant Garamond', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--black) 0%, var(--black-soft) 50%, var(--black) 100%);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23D4AF37" opacity="0.1"/></svg>');
+    background-size: 50px 50px;
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.emblem {
+    width: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.5));
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4)); }
+    to { filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.7)); }
+}
+
+.family-name {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 60px rgba(212, 175, 55, 0.5);
+}
+
+.motto {
+    font-family: var(--font-body);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold-light);
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+}
+
+.motto-translation {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: var(--white-soft);
+    letter-spacing: 0.15em;
+    opacity: 0.8;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-indicator span {
+    display: block;
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scroll 2s ease-in-out infinite;
+}
+
+@keyframes scroll {
+    0%, 100% { opacity: 0; transform: translateY(-10px); }
+    50% { opacity: 1; transform: translateY(10px); }
+}
+
+/* About Section */
+.about {
+    padding: 8rem 0;
+    background: var(--black-soft);
+}
+
+.about h2,
+.crest-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 2rem auto;
+}
+
+.lead {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    color: var(--white-soft);
+    line-height: 1.8;
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.value {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.value:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.value h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.value p {
+    color: var(--white-soft);
+    font-size: 1.1rem;
+}
+
+/* Crest Section */
+.crest-section {
+    padding: 8rem 0;
+    background: var(--black);
+}
+
+.crest-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .crest-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+.crest-image {
+    display: flex;
+    justify-content: center;
+}
+
+.crest-image img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
+}
+
+.crest-description h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.crest-description p {
+    font-size: 1.2rem;
+    color: var(--white-soft);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.established {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+}
+
+/* Footer */
+footer {
+    padding: 4rem 0;
+    background: var(--black-soft);
+    text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-wordmark {
+    height: 40px;
+    width: auto;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--white-soft);
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+/* Animations on scroll */
+.about, .crest-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.about.visible, .crest-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

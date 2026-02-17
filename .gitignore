@@ -1,0 +1,33 @@
+# Casa Ascendente - Git Ignore
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Dependencies (if we add any later)
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Local environment
+.env
+.env.local
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp

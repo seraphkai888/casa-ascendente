@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="seraphGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A227"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#C9A227"/>
+    </linearGradient>
+    <linearGradient id="divineBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A5F"/>
+      <stop offset="100%" style="stop-color:#0A1628"/>
+    </linearGradient>
+    <filter id="etherealGlow">
+      <feGaussianBlur stdDeviation="8" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="250" fill="url(#divineBlue)"/>
+  
+  <!-- Outer ring -->
+  <circle cx="256" cy="256" r="240" fill="none" stroke="url(#seraphGold)" stroke-width="3" opacity="0.5"/>
+  
+  <!-- Ascending figure silhouette -->
+  <g filter="url(#etherealGlow)">
+    <!-- Body -->
+    <ellipse cx="256" cy="280" rx="35" ry="80" fill="url(#seraphGold)"/>
+    
+    <!-- Head/Halo -->
+    <circle cx="256" cy="180" r="30" fill="url(#seraphGold)"/>
+    <circle cx="256" cy="180" r="45" fill="none" stroke="url(#seraphGold)" stroke-width="3" opacity="0.6"/>
+    
+    <!-- Wings - Left -->
+    <path d="M 220 260 
+             Q 120 200, 80 280
+             Q 100 320, 180 300
+             Q 200 290, 220 280" 
+          fill="url(#seraphGold)" opacity="0.9"/>
+    
+    <!-- Wings - Right -->
+    <path d="M 292 260 
+             Q 392 200, 432 280
+             Q 412 320, 332 300
+             Q 312 290, 292 280" 
+          fill="url(#seraphGold)" opacity="0.9"/>
+    
+    <!-- Arms open -->
+    <path d="M 220 250 Q 180 240, 150 260" 
+          fill="none" stroke="url(#seraphGold)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 292 250 Q 332 240, 362 260" 
+          fill="none" stroke="url(#seraphGold)" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Rising energy lines -->
+  <g opacity="0.4" stroke="url(#seraphGold)" stroke-width="2" fill="none">
+    <path d="M 256 380 L 256 420"/>
+    <path d="M 236 375 L 220 410"/>
+    <path d="M 276 375 L 292 410"/>
+  </g>
+</svg>
