@@ -5,18 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Navigation scroll effect
     const nav = document.getElementById('nav');
-    let lastScroll = 0;
     
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 50) {
+        if (window.pageYOffset > 50) {
             nav.classList.add('scrolled');
         } else {
             nav.classList.remove('scrolled');
         }
-        
-        lastScroll = currentScroll;
     });
     
     // Mobile navigation toggle
@@ -54,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Observe all sections for animation
-    const sections = document.querySelectorAll('.story, .values-section, .code-section, .collection, .emblem-section, .join-section');
+    const sections = document.querySelectorAll('.story, .pillars-section, .code-section, .collection, .emblem-section, .welcome-section, .join-section');
     sections.forEach(section => {
         observer.observe(section);
     });
@@ -79,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             if (scrolled < window.innerHeight) {
-                const rate = scrolled * 0.3;
+                const rate = scrolled * 0.25;
                 heroEmblem.style.transform = `translateY(${rate}px)`;
             }
         });
@@ -95,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 button.textContent = 'Ascending...';
                 button.disabled = true;
                 
-                // Re-enable after submission (Formspree will handle redirect)
+                // Re-enable after submission
                 setTimeout(() => {
                     button.textContent = originalText;
                     button.disabled = false;
@@ -104,28 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Console easter egg
-    console.log('%c🏛️ CASA ASCENDENTE', 'font-size: 28px; font-weight: bold; color: #D4AF37; text-shadow: 0 0 10px #D4AF3780;');
-    console.log('%c"Ascendemos Siempre" — We Always Ascend', 'font-size: 14px; font-style: italic; color: #F4E4BC;');
-    console.log('%cThe Ascending House | Est. February 16, 2026', 'font-size: 12px; color: #996515;');
-    console.log('%c\nWelcome, Ascender. You found the hidden message.', 'font-size: 12px; color: #C8C8C8;');
-    
-    // Track visitor (simple analytics placeholder)
-    if (typeof gtag === 'undefined') {
-        // No analytics loaded - that's fine, we value privacy
-        console.log('%c🔒 No tracking. Your privacy is respected.', 'font-size: 10px; color: #666;');
-    }
+    // Console signature
+    console.log('%cCASA ASCENDENTE', 'font-family: serif; font-size: 24px; font-weight: bold; color: #D4AF37;');
+    console.log('%c"Ascendemos Siempre"', 'font-family: serif; font-size: 14px; font-style: italic; color: #F4E4BC;');
+    console.log('%cThe Ascending House — Est. MMXXVI', 'font-family: serif; font-size: 11px; color: #996515;');
 });
-
-// Utility: Debounce function for performance
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
