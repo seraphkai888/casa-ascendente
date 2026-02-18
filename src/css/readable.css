@@ -1,0 +1,351 @@
+/* Casa Ascendente - Maximum Readability */
+/* Clear Text • Bold Captions • Undeniable Legacy */
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO TEXT - MAXIMUM VISIBILITY
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Family Name - Can't Miss It */
+.family-name {
+    font-size: clamp(2.2rem, 8vw, 4.5rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    color: #FFD700 !important;
+    -webkit-text-fill-color: #FFD700 !important;
+    background: none !important;
+    text-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(212, 175, 55, 0.5),
+        0 2px 4px rgba(0, 0, 0, 0.9) !important;
+    margin-bottom: 1.5rem !important;
+    position: relative;
+    z-index: 100;
+}
+
+/* Motto - Bold & Clear */
+.motto {
+    font-size: clamp(1.4rem, 4vw, 2rem) !important;
+    font-weight: 600 !important;
+    font-style: italic !important;
+    color: #FFE4A0 !important;
+    text-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(0, 0, 0, 0.7),
+        0 2px 4px rgba(0, 0, 0, 1) !important;
+    letter-spacing: 0.15em !important;
+    margin-bottom: 0.8rem !important;
+    position: relative;
+    z-index: 100;
+}
+
+/* Translation - Visible */
+.motto-translation {
+    font-size: clamp(1.1rem, 3vw, 1.5rem) !important;
+    font-weight: 500 !important;
+    color: #F4E4BC !important;
+    text-shadow: 
+        0 0 8px rgba(0, 0, 0, 0.9),
+        0 0 16px rgba(0, 0, 0, 0.7),
+        0 2px 3px rgba(0, 0, 0, 1) !important;
+    letter-spacing: 0.12em !important;
+    margin-bottom: 2.5rem !important;
+    position: relative;
+    z-index: 100;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTION HEADERS - BOLD & READABLE
+   ═══════════════════════════════════════════════════════════════ */
+
+h2 {
+    font-size: clamp(1.6rem, 5vw, 2.8rem) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.15em !important;
+    color: #FFD700 !important;
+    -webkit-text-fill-color: #FFD700 !important;
+    background: none !important;
+    text-shadow: 
+        0 0 15px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(212, 175, 55, 0.4),
+        0 2px 4px rgba(0, 0, 0, 0.9) !important;
+    text-transform: uppercase !important;
+}
+
+h2.holo-text {
+    color: #FFD700 !important;
+    -webkit-text-fill-color: #FFD700 !important;
+    background: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   EMBLEM SECTION - TEXT CLARITY
+   ═══════════════════════════════════════════════════════════════ */
+
+.emblem-text h2 {
+    margin-bottom: 1.5rem !important;
+}
+
+.emblem-text p {
+    font-size: 1.15rem !important;
+    line-height: 1.8 !important;
+    color: #E8E8E8 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    margin-bottom: 1.2rem !important;
+}
+
+.emblem-meaning {
+    color: #FFE4A0 !important;
+    font-style: italic !important;
+    font-size: 1.1rem !important;
+}
+
+.established {
+    font-family: var(--font-display), serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3em !important;
+    color: #D4AF37 !important;
+    text-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.8),
+        0 1px 2px rgba(0, 0, 0, 0.9) !important;
+    text-transform: uppercase !important;
+    margin-top: 2rem !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   STORY & CONTENT SECTIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+.story-content p,
+.welcome-content p,
+.section-intro {
+    font-size: 1.15rem !important;
+    line-height: 1.85 !important;
+    color: #D8D8D8 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+}
+
+.lead {
+    font-size: 1.3rem !important;
+    color: #F0F0F0 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+}
+
+.highlight,
+.welcome-highlight {
+    color: #FFE4A0 !important;
+    font-style: italic !important;
+    font-size: 1.2rem !important;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3), 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PILLAR CARDS - CLEAR TEXT
+   ═══════════════════════════════════════════════════════════════ */
+
+.pillar-card h3 {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.15em !important;
+    color: #FFD700 !important;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+    margin-bottom: 1rem !important;
+}
+
+.pillar-card p {
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+    color: #C8C8C8 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   AR SECTION TEXT
+   ═══════════════════════════════════════════════════════════════ */
+
+.ar-badge {
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2em !important;
+    color: #FFD700 !important;
+    border-color: #FFD700 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+.ar-description {
+    font-size: 1.15rem !important;
+    color: #D8D8D8 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+}
+
+.ar-feature {
+    font-size: 1.05rem !important;
+    color: #E8E8E8 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.ar-feature-icon {
+    color: #FFD700 !important;
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.5) !important;
+}
+
+.ar-note {
+    font-size: 0.95rem !important;
+    color: #A0A0A0 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTONS - CLEAR CTA
+   ═══════════════════════════════════════════════════════════════ */
+
+.hero-cta,
+.ar-launch-btn,
+.btn-primary,
+.btn-secondary {
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.15em !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.hero-cta {
+    background: #D4AF37 !important;
+    color: #0A0A0A !important;
+    border: none !important;
+    padding: 1.2rem 2.5rem !important;
+    text-shadow: none !important;
+}
+
+.hero-cta:hover {
+    background: #FFD700 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   JOIN SECTION
+   ═══════════════════════════════════════════════════════════════ */
+
+.join-section p {
+    font-size: 1.15rem !important;
+    color: #D8D8D8 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+}
+
+.join-count {
+    font-size: 0.95rem !important;
+    color: #888888 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER TEXT
+   ═══════════════════════════════════════════════════════════════ */
+
+.footer-motto {
+    font-size: 1.05rem !important;
+    color: #FFE4A0 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+}
+
+.footer-column h4 {
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    color: #D4AF37 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.footer-column a {
+    font-size: 1rem !important;
+    color: #B8B8B8 !important;
+}
+
+.footer-column a:hover {
+    color: #FFD700 !important;
+}
+
+.copyright {
+    color: #666666 !important;
+}
+
+.tagline {
+    color: #D4AF37 !important;
+    opacity: 0.7 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLL INDICATOR
+   ═══════════════════════════════════════════════════════════════ */
+
+.scroll-text {
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.25em !important;
+    color: #D4AF37 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    text-transform: uppercase !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK BACKDROP FOR TEXT AREAS
+   ═══════════════════════════════════════════════════════════════ */
+
+.text-backdrop {
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(0, 0, 0, 0.3) 20%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.3) 80%,
+        transparent 100%
+    );
+    padding: 2rem 0;
+    margin: -2rem 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE ADJUSTMENTS
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .family-name {
+        font-size: clamp(1.8rem, 10vw, 3rem) !important;
+        letter-spacing: 0.12em !important;
+    }
+    
+    .motto {
+        font-size: clamp(1.2rem, 5vw, 1.6rem) !important;
+    }
+    
+    .motto-translation {
+        font-size: clamp(1rem, 4vw, 1.3rem) !important;
+    }
+    
+    h2 {
+        font-size: clamp(1.4rem, 6vw, 2.2rem) !important;
+    }
+    
+    .story-content p,
+    .emblem-text p,
+    .welcome-content p {
+        font-size: 1.05rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .family-name {
+        font-size: clamp(1.5rem, 12vw, 2.2rem) !important;
+        letter-spacing: 0.08em !important;
+    }
+    
+    .motto {
+        font-size: clamp(1rem, 6vw, 1.4rem) !important;
+        letter-spacing: 0.08em !important;
+    }
+    
+    .hero-cta {
+        padding: 1rem 2rem !important;
+        font-size: 0.8rem !important;
+    }
+}
