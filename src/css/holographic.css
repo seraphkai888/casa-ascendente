@@ -1,0 +1,649 @@
+/* Casa Ascendente - Advanced Holographic System */
+/* Multidimensional • Chromatic • Alive */
+
+/* ═══════════════════════════════════════════════════════════════
+   HOLOGRAPHIC CORE SYSTEM
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Holographic Shimmer - Rainbow Light Refraction */
+.holo-shimmer {
+    position: relative;
+}
+
+.holo-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        transparent 0%,
+        rgba(255, 0, 128, 0.03) 10%,
+        rgba(0, 255, 255, 0.03) 20%,
+        rgba(255, 215, 0, 0.05) 30%,
+        transparent 40%,
+        rgba(255, 0, 128, 0.03) 50%,
+        rgba(0, 255, 255, 0.03) 60%,
+        rgba(255, 215, 0, 0.05) 70%,
+        transparent 80%
+    );
+    background-size: 400% 400%;
+    animation: holoShimmer 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+}
+
+@keyframes holoShimmer {
+    0%, 100% { background-position: 0% 0%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MULTIDIMENSIONAL CREST
+   ═══════════════════════════════════════════════════════════════ */
+
+.crest-hologram {
+    position: relative;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+}
+
+/* Depth Layers */
+.crest-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.crest-layer-1 {
+    transform: translateZ(20px);
+    filter: blur(0px);
+}
+
+.crest-layer-2 {
+    transform: translateZ(40px);
+    opacity: 0.6;
+    filter: blur(1px);
+}
+
+.crest-layer-3 {
+    transform: translateZ(60px);
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+/* Chromatic Aberration */
+.chromatic {
+    position: relative;
+}
+
+.chromatic::before,
+.chromatic::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+
+.chromatic::before {
+    transform: translate(-2px, -1px);
+    filter: hue-rotate(-30deg) saturate(2);
+    opacity: 0.15;
+    mix-blend-mode: screen;
+}
+
+.chromatic::after {
+    transform: translate(2px, 1px);
+    filter: hue-rotate(30deg) saturate(2);
+    opacity: 0.15;
+    mix-blend-mode: screen;
+}
+
+/* Light Rays Emanating */
+.light-rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.light-ray {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 150%;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(212, 175, 55, 0.3) 20%,
+        rgba(212, 175, 55, 0.1) 50%,
+        transparent
+    );
+    transform-origin: center top;
+    animation: rayPulse 4s ease-in-out infinite;
+}
+
+.light-ray:nth-child(1) { transform: rotate(0deg); animation-delay: 0s; }
+.light-ray:nth-child(2) { transform: rotate(45deg); animation-delay: 0.5s; }
+.light-ray:nth-child(3) { transform: rotate(90deg); animation-delay: 1s; }
+.light-ray:nth-child(4) { transform: rotate(135deg); animation-delay: 1.5s; }
+.light-ray:nth-child(5) { transform: rotate(180deg); animation-delay: 2s; }
+.light-ray:nth-child(6) { transform: rotate(225deg); animation-delay: 2.5s; }
+.light-ray:nth-child(7) { transform: rotate(270deg); animation-delay: 3s; }
+.light-ray:nth-child(8) { transform: rotate(315deg); animation-delay: 3.5s; }
+
+@keyframes rayPulse {
+    0%, 100% { opacity: 0.3; height: 100%; }
+    50% { opacity: 0.8; height: 150%; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOLOGRAPHIC EMBLEM CONTAINER - HERO
+   ═══════════════════════════════════════════════════════════════ */
+
+.holo-emblem-container {
+    position: relative;
+    width: 320px;
+    height: 380px;
+    margin: 0 auto 2rem;
+    perspective: 1500px;
+    transform-style: preserve-3d;
+}
+
+/* Base Glow Platform */
+.holo-base {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%) rotateX(75deg);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(
+        ellipse,
+        rgba(212, 175, 55, 0.4) 0%,
+        rgba(212, 175, 55, 0.1) 40%,
+        transparent 70%
+    );
+    animation: basePulse 3s ease-in-out infinite;
+}
+
+@keyframes basePulse {
+    0%, 100% { opacity: 0.6; transform: translateX(-50%) rotateX(75deg) scale(1); }
+    50% { opacity: 1; transform: translateX(-50%) rotateX(75deg) scale(1.1); }
+}
+
+/* Orbital Rings */
+.holo-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+.orbit-1 {
+    width: 280px;
+    height: 280px;
+    margin: -140px 0 0 -140px;
+    border-color: rgba(212, 175, 55, 0.4);
+    animation: orbit1 15s linear infinite;
+}
+
+.orbit-2 {
+    width: 320px;
+    height: 320px;
+    margin: -160px 0 0 -160px;
+    border-color: rgba(212, 175, 55, 0.2);
+    border-style: dashed;
+    animation: orbit2 20s linear infinite reverse;
+}
+
+.orbit-3 {
+    width: 360px;
+    height: 360px;
+    margin: -180px 0 0 -180px;
+    border-color: rgba(212, 175, 55, 0.1);
+    animation: orbit3 25s linear infinite;
+}
+
+@keyframes orbit1 {
+    from { transform: rotateX(70deg) rotateZ(0deg); }
+    to { transform: rotateX(70deg) rotateZ(360deg); }
+}
+
+@keyframes orbit2 {
+    from { transform: rotateX(60deg) rotateY(20deg) rotateZ(0deg); }
+    to { transform: rotateX(60deg) rotateY(20deg) rotateZ(360deg); }
+}
+
+@keyframes orbit3 {
+    from { transform: rotateX(80deg) rotateY(-10deg) rotateZ(0deg); }
+    to { transform: rotateX(80deg) rotateY(-10deg) rotateZ(360deg); }
+}
+
+/* Orbit Particles */
+.orbit-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold);
+}
+
+.orbit-1 .orbit-particle { top: -3px; left: 50%; }
+.orbit-2 .orbit-particle { top: 50%; right: -3px; }
+.orbit-3 .orbit-particle { bottom: -3px; left: 50%; }
+
+/* Main Emblem */
+.holo-emblem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    animation: emblemFloat 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.5));
+    z-index: 10;
+}
+
+@keyframes emblemFloat {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0) rotateY(0deg); }
+    25% { transform: translate(-50%, -50%) translateY(-15px) rotateY(3deg); }
+    50% { transform: translate(-50%, -50%) translateY(-20px) rotateY(0deg); }
+    75% { transform: translate(-50%, -50%) translateY(-15px) rotateY(-3deg); }
+}
+
+/* Holographic Scan Lines */
+.holo-scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(212, 175, 55, 0.03) 2px,
+        rgba(212, 175, 55, 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 20;
+    animation: scanMove 10s linear infinite;
+}
+
+@keyframes scanMove {
+    from { background-position: 0 0; }
+    to { background-position: 0 100px; }
+}
+
+/* Energy Field */
+.holo-energy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(212, 175, 55, 0.1) 0%,
+        rgba(212, 175, 55, 0.05) 30%,
+        transparent 70%
+    );
+    animation: energyPulse 2s ease-in-out infinite;
+    z-index: 5;
+}
+
+@keyframes energyPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+}
+
+/* Lens Flare */
+.lens-flare {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(212, 175, 55, 0.4) 20%,
+        transparent 60%
+    );
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0;
+    animation: flareGlow 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes flareGlow {
+    0%, 40%, 100% { opacity: 0; transform: scale(0.5); }
+    50%, 60% { opacity: 0.6; transform: scale(1); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NAV LOGO HOLOGRAPHIC
+   ═══════════════════════════════════════════════════════════════ */
+
+.nav-logo-holo {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-logo-holo img {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.nav-logo-holo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 200%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+        ellipse,
+        rgba(212, 175, 55, 0.2) 0%,
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.nav-logo-holo:hover::before {
+    opacity: 1;
+}
+
+.nav-logo-holo:hover img {
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTION CRESTS - MULTIDIMENSIONAL
+   ═══════════════════════════════════════════════════════════════ */
+
+.section-crest {
+    position: relative;
+    display: inline-block;
+    perspective: 1000px;
+}
+
+.section-crest img {
+    transition: transform 0.5s ease;
+}
+
+.section-crest:hover img {
+    transform: rotateY(15deg) rotateX(5deg);
+}
+
+/* Depth Shadow Layers */
+.section-crest::before,
+.section-crest::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.section-crest::before {
+    transform: translateZ(-10px) scale(1.02);
+    filter: blur(2px);
+}
+
+.section-crest::after {
+    transform: translateZ(-20px) scale(1.04);
+    filter: blur(4px);
+    opacity: 0.1;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOLOGRAPHIC TEXT EFFECTS
+   ═══════════════════════════════════════════════════════════════ */
+
+.holo-text {
+    position: relative;
+    background: linear-gradient(
+        90deg,
+        var(--gold) 0%,
+        var(--gold-light) 25%,
+        var(--gold) 50%,
+        var(--gold-light) 75%,
+        var(--gold) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShine 3s linear infinite;
+}
+
+@keyframes textShine {
+    to { background-position: 200% center; }
+}
+
+/* Data Stream Effect */
+.data-stream {
+    position: relative;
+    overflow: hidden;
+}
+
+.data-stream::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(212, 175, 55, 0.1),
+        transparent
+    );
+    animation: dataStream 3s ease-in-out infinite;
+}
+
+@keyframes dataStream {
+    0% { left: -100%; }
+    50%, 100% { left: 100%; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DIMENSIONAL CARDS
+   ═══════════════════════════════════════════════════════════════ */
+
+.dimensional-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.dimensional-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        transparent 0%,
+        rgba(212, 175, 55, 0.05) 50%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.dimensional-card:hover::before {
+    opacity: 1;
+}
+
+.dimensional-card:hover {
+    transform: translateZ(20px) rotateX(2deg) rotateY(-2deg);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(212, 175, 55, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   AMBIENT LIGHT EFFECTS
+   ═══════════════════════════════════════════════════════════════ */
+
+.ambient-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background: 
+        radial-gradient(ellipse at 20% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(26, 31, 60, 0.1) 0%, transparent 70%);
+    animation: ambientShift 20s ease-in-out infinite;
+}
+
+@keyframes ambientShift {
+    0%, 100% { 
+        background-position: 0% 0%, 100% 100%, 50% 50%;
+    }
+    50% { 
+        background-position: 100% 100%, 0% 0%, 50% 50%;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER EMBLEM HOLOGRAPHIC
+   ═══════════════════════════════════════════════════════════════ */
+
+.footer-emblem-holo {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-emblem-holo img {
+    transition: all 0.5s ease;
+}
+
+.footer-emblem-holo:hover img {
+    transform: scale(1.1) rotateY(10deg);
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
+}
+
+.footer-emblem-holo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 10px;
+    background: radial-gradient(
+        ellipse,
+        rgba(212, 175, 55, 0.3) 0%,
+        transparent 70%
+    );
+    filter: blur(3px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.footer-emblem-holo:hover::after {
+    opacity: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE ADJUSTMENTS
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .holo-emblem-container {
+        width: 260px;
+        height: 320px;
+    }
+    
+    .holo-emblem {
+        width: 180px;
+    }
+    
+    .orbit-1 {
+        width: 220px;
+        height: 220px;
+        margin: -110px 0 0 -110px;
+    }
+    
+    .orbit-2 {
+        width: 260px;
+        height: 260px;
+        margin: -130px 0 0 -130px;
+    }
+    
+    .orbit-3 {
+        width: 300px;
+        height: 300px;
+        margin: -150px 0 0 -150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .holo-emblem-container {
+        width: 220px;
+        height: 280px;
+    }
+    
+    .holo-emblem {
+        width: 150px;
+    }
+    
+    .orbit-2, .orbit-3 {
+        display: none;
+    }
+    
+    .orbit-1 {
+        width: 180px;
+        height: 180px;
+        margin: -90px 0 0 -90px;
+    }
+}

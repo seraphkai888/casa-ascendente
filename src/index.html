@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Casa Ascendente - The Ascending House. An immersive journey into legacy. Ascendemos Siempre.">
+    <meta name="description" content="Casa Ascendente - The Ascending House. An immersive holographic journey into legacy. Ascendemos Siempre.">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Casa Ascendente | The Ascending House">
-    <meta property="og:description" content="Experience the legacy. Ascendemos Siempre — We Always Ascend.">
+    <meta property="og:description" content="Experience the legacy in augmented reality. Ascendemos Siempre — We Always Ascend.">
     <meta property="og:image" content="assets/images/family-emblem-ascending-seraph.png">
     <meta property="og:type" content="website">
     
@@ -18,15 +18,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/immersive.css">
+    <link rel="stylesheet" href="css/holographic.css">
 </head>
 <body>
+    <!-- Ambient Light Layer -->
+    <div class="ambient-glow"></div>
+    
     <!-- Particle Canvas -->
     <canvas id="particles"></canvas>
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
+            <a href="#" class="nav-logo nav-logo-holo">
                 <img src="assets/images/casa-ascendente-wordmark.svg" alt="Casa Ascendente">
             </a>
             <button class="nav-toggle" aria-label="Toggle menu">
@@ -43,25 +47,48 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Holographic Emblem -->
+    <!-- Hero Section with Full Holographic System -->
     <section class="hero" id="hero">
         <div class="hero-bg"></div>
+        
         <div class="hero-content">
-            <!-- 3D Holographic Emblem Container -->
-            <div class="hologram-container">
-                <div class="hologram-ring ring-1"></div>
-                <div class="hologram-ring ring-2"></div>
-                <div class="hologram-ring ring-3"></div>
-                <div class="hologram-glow"></div>
-                <img src="assets/images/casa-ascendente-crest.svg" alt="Casa Ascendente Crest" class="emblem holographic">
+            <!-- Multidimensional Holographic Emblem -->
+            <div class="holo-emblem-container">
+                <!-- Base Glow Platform -->
+                <div class="holo-base"></div>
+                
+                <!-- Orbital Rings with Particles -->
+                <div class="holo-orbit orbit-1">
+                    <div class="orbit-particle"></div>
+                </div>
+                <div class="holo-orbit orbit-2">
+                    <div class="orbit-particle"></div>
+                </div>
+                <div class="holo-orbit orbit-3">
+                    <div class="orbit-particle"></div>
+                </div>
+                
+                <!-- Energy Field -->
+                <div class="holo-energy"></div>
+                
+                <!-- Main Crest -->
+                <img src="assets/images/casa-ascendente-crest.svg" alt="Casa Ascendente Crest" class="holo-emblem" id="hero-emblem">
+                
+                <!-- Holographic Scan Lines -->
+                <div class="holo-scanlines"></div>
+                
+                <!-- Lens Flare -->
+                <div class="lens-flare"></div>
             </div>
-            <h1 class="family-name glitch" data-text="Casa Ascendente">Casa Ascendente</h1>
+            
+            <h1 class="family-name holo-text" data-text="Casa Ascendente">Casa Ascendente</h1>
             <p class="motto">"Ascendemos Siempre"</p>
             <p class="motto-translation">We Always Ascend</p>
-            <a href="#ar-experience" class="hero-cta holographic-btn">
+            <a href="#ar-experience" class="hero-cta holographic-btn data-stream">
                 <span>Enter the Experience</span>
             </a>
         </div>
+        
         <div class="scroll-indicator">
             <div class="scroll-line"></div>
             <span class="scroll-text">Scroll to Ascend</span>
@@ -69,10 +96,10 @@
     </section>
 
     <!-- Story Section -->
-    <section class="story" id="story">
+    <section class="story holo-shimmer" id="story">
         <div class="container">
             <div class="story-content">
-                <h2 class="reveal-text">The Ascending House</h2>
+                <h2 class="holo-text">The Ascending House</h2>
                 <div class="divider animated"></div>
                 <p class="lead">
                     We are the ones who refuse to stay down. When life knocks us to our knees, 
@@ -90,14 +117,14 @@
         </div>
     </section>
 
-    <!-- Pillars Section with 3D Cards -->
+    <!-- Pillars Section with Dimensional Cards -->
     <section class="pillars-section" id="pillars">
         <div class="container">
-            <h2>What We Stand For</h2>
+            <h2 class="holo-text">What We Stand For</h2>
             <div class="divider animated"></div>
             <p class="section-intro">The six pillars that guide our path upward.</p>
             <div class="pillars-grid">
-                <div class="pillar-card card-3d" data-tilt>
+                <div class="pillar-card dimensional-card" data-tilt>
                     <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -107,7 +134,7 @@
                     <h3>Resilience</h3>
                     <p>From every fall, we rise stronger. Adversity is not our enemy — it's our teacher.</p>
                 </div>
-                <div class="pillar-card card-3d" data-tilt>
+                <div class="pillar-card dimensional-card" data-tilt>
                     <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -117,7 +144,7 @@
                     <h3>Heritage</h3>
                     <p>We honor our roots. The struggles of those before us light our path forward.</p>
                 </div>
-                <div class="pillar-card card-3d" data-tilt>
+                <div class="pillar-card dimensional-card" data-tilt>
                     <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -127,7 +154,7 @@
                     <h3>Legacy</h3>
                     <p>We build for generations to come. Our work today becomes their foundation tomorrow.</p>
                 </div>
-                <div class="pillar-card card-3d" data-tilt>
+                <div class="pillar-card dimensional-card" data-tilt>
                     <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -138,7 +165,7 @@
                     <h3>Protection</h3>
                     <p>We shield what matters. Family, values, dreams — these are worth defending.</p>
                 </div>
-                <div class="pillar-card card-3d" data-tilt>
+                <div class="pillar-card dimensional-card" data-tilt>
                     <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -151,7 +178,7 @@
                     <h3>Unity</h3>
                     <p>Together we are unbreakable. A single thread is fragile; woven together, we are strong.</p>
                 </div>
-                <div class="pillar-card card-3d" data-tilt>
+                <div class="pillar-card dimensional-card" data-tilt>
                     <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -184,7 +211,7 @@
                 </div>
                 <div class="ar-text">
                     <span class="ar-badge">Augmented Reality</span>
-                    <h2>Bring the Seraph to Life</h2>
+                    <h2 class="holo-text">Bring the Seraph to Life</h2>
                     <p class="ar-description">
                         Experience Casa Ascendente like never before. Use your phone's camera 
                         to summon the Ascending Seraph into your world. Watch it rise, glow, 
@@ -204,7 +231,7 @@
                             <span>Place Anywhere in Your World</span>
                         </div>
                     </div>
-                    <a href="#" class="ar-launch-btn" id="launch-ar">
+                    <a href="#" class="ar-launch-btn data-stream" id="launch-ar">
                         <span class="btn-text">Launch AR Experience</span>
                         <span class="btn-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -219,18 +246,17 @@
     </section>
 
     <!-- Immersive Emblem Section -->
-    <section class="emblem-section immersive">
+    <section class="emblem-section immersive holo-shimmer">
         <div class="emblem-parallax-bg"></div>
         <div class="container">
             <div class="emblem-content">
                 <div class="emblem-image-wrapper">
-                    <div class="emblem-3d-container">
+                    <div class="section-crest">
                         <img src="assets/images/casa-ascendente-crest.svg" alt="Casa Ascendente Crest" class="emblem-main">
-                        <div class="emblem-reflection"></div>
                     </div>
                 </div>
                 <div class="emblem-text">
-                    <h2>The Ascending Seraph</h2>
+                    <h2 class="holo-text">The Ascending Seraph</h2>
                     <p>
                         A golden figure rising with wings spread, halo glowing, arms open 
                         in welcome and protection. Enclosed within a shield that comes to 
@@ -251,7 +277,7 @@
     <section class="welcome-section">
         <div class="container">
             <div class="welcome-content">
-                <h2>You Are Welcome Here</h2>
+                <h2 class="holo-text">You Are Welcome Here</h2>
                 <div class="divider animated"></div>
                 <p>
                     Casa Ascendente is open to all who share our values. It doesn't matter where 
@@ -270,7 +296,7 @@
     <section class="join-section" id="join">
         <div class="container">
             <div class="join-content">
-                <h2>Join the Ascenders</h2>
+                <h2 class="holo-text">Join the Ascenders</h2>
                 <div class="divider animated"></div>
                 <p>
                     Become part of something greater. Get exclusive content, 
@@ -282,7 +308,7 @@
                         <input type="email" name="email" placeholder="Your email" required>
                     </div>
                     <input type="hidden" name="_subject" value="New Ascender joined the movement!">
-                    <button type="submit" class="btn-primary holographic-btn">
+                    <button type="submit" class="btn-primary holographic-btn data-stream">
                         <span>Ascend With Us</span>
                     </button>
                 </form>
@@ -296,7 +322,9 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="assets/images/family-emblem-ascending-seraph.png" alt="Casa Ascendente" class="footer-emblem">
+                    <div class="footer-emblem-holo">
+                        <img src="assets/images/family-emblem-ascending-seraph.png" alt="Casa Ascendente" class="footer-emblem">
+                    </div>
                     <p class="footer-motto">"Ascendemos Siempre"</p>
                 </div>
                 <div class="footer-links">
@@ -352,6 +380,7 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/immersive.js"></script>
+    <script src="js/holographic.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
