@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Casa Ascendente - The Ascending House. Join a movement of people who rise from every challenge. Ascendemos Siempre.">
-    <meta name="keywords" content="Casa Ascendente, Ascending House, family legacy, resilience, rise, movement">
+    <meta name="description" content="Casa Ascendente - The Ascending House. An immersive journey into legacy. Ascendemos Siempre.">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Casa Ascendente | The Ascending House">
-    <meta property="og:description" content="Join a movement of people who rise from every challenge. Ascendemos Siempre — We Always Ascend.">
+    <meta property="og:description" content="Experience the legacy. Ascendemos Siempre — We Always Ascend.">
     <meta property="og:image" content="assets/images/family-emblem-ascending-seraph.png">
     <meta property="og:type" content="website">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Casa Ascendente | The Ascending House">
-    <meta name="twitter:description" content="Join a movement of people who rise from every challenge.">
     
     <title>Casa Ascendente | The Ascending House</title>
     <link rel="icon" type="image/png" href="assets/images/family-emblem-ascending-seraph.png">
@@ -23,8 +17,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/immersive.css">
 </head>
 <body>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-container">
@@ -39,24 +37,34 @@
             <ul class="nav-menu">
                 <li><a href="#story">Our Story</a></li>
                 <li><a href="#pillars">Our Pillars</a></li>
-                <li><a href="#collection">Collection</a></li>
+                <li><a href="#ar-experience">AR Experience</a></li>
                 <li><a href="#join" class="nav-cta">Join Us</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Holographic Emblem -->
     <section class="hero" id="hero">
         <div class="hero-bg"></div>
         <div class="hero-content">
-            <img src="assets/images/casa-ascendente-crest.svg" alt="Casa Ascendente Crest" class="emblem">
-            <h1 class="family-name">Casa Ascendente</h1>
+            <!-- 3D Holographic Emblem Container -->
+            <div class="hologram-container">
+                <div class="hologram-ring ring-1"></div>
+                <div class="hologram-ring ring-2"></div>
+                <div class="hologram-ring ring-3"></div>
+                <div class="hologram-glow"></div>
+                <img src="assets/images/casa-ascendente-crest.svg" alt="Casa Ascendente Crest" class="emblem holographic">
+            </div>
+            <h1 class="family-name glitch" data-text="Casa Ascendente">Casa Ascendente</h1>
             <p class="motto">"Ascendemos Siempre"</p>
             <p class="motto-translation">We Always Ascend</p>
-            <a href="#join" class="hero-cta">Join the Movement</a>
+            <a href="#ar-experience" class="hero-cta holographic-btn">
+                <span>Enter the Experience</span>
+            </a>
         </div>
         <div class="scroll-indicator">
-            <span></span>
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scroll to Ascend</span>
         </div>
     </section>
 
@@ -64,8 +72,8 @@
     <section class="story" id="story">
         <div class="container">
             <div class="story-content">
-                <h2>The Ascending House</h2>
-                <div class="divider"></div>
+                <h2 class="reveal-text">The Ascending House</h2>
+                <div class="divider animated"></div>
                 <p class="lead">
                     We are the ones who refuse to stay down. When life knocks us to our knees, 
                     we find the strength to rise — stronger, wiser, more determined than before.
@@ -82,14 +90,15 @@
         </div>
     </section>
 
-    <!-- Pillars Section -->
+    <!-- Pillars Section with 3D Cards -->
     <section class="pillars-section" id="pillars">
         <div class="container">
             <h2>What We Stand For</h2>
-            <div class="divider"></div>
+            <div class="divider animated"></div>
             <p class="section-intro">The six pillars that guide our path upward.</p>
             <div class="pillars-grid">
-                <div class="pillar-card">
+                <div class="pillar-card card-3d" data-tilt>
+                    <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
@@ -98,7 +107,8 @@
                     <h3>Resilience</h3>
                     <p>From every fall, we rise stronger. Adversity is not our enemy — it's our teacher.</p>
                 </div>
-                <div class="pillar-card">
+                <div class="pillar-card card-3d" data-tilt>
+                    <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z"/>
@@ -107,7 +117,8 @@
                     <h3>Heritage</h3>
                     <p>We honor our roots. The struggles of those before us light our path forward.</p>
                 </div>
-                <div class="pillar-card">
+                <div class="pillar-card card-3d" data-tilt>
+                    <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M3 21H21M5 21V7L12 3L19 7V21M9 21V14H15V21"/>
@@ -116,7 +127,8 @@
                     <h3>Legacy</h3>
                     <p>We build for generations to come. Our work today becomes their foundation tomorrow.</p>
                 </div>
-                <div class="pillar-card">
+                <div class="pillar-card card-3d" data-tilt>
+                    <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z"/>
@@ -126,7 +138,8 @@
                     <h3>Protection</h3>
                     <p>We shield what matters. Family, values, dreams — these are worth defending.</p>
                 </div>
-                <div class="pillar-card">
+                <div class="pillar-card card-3d" data-tilt>
+                    <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M17 21V19C17 16.79 14.76 15 12 15C9.24 15 7 16.79 7 19V21"/>
@@ -138,7 +151,8 @@
                     <h3>Unity</h3>
                     <p>Together we are unbreakable. A single thread is fragile; woven together, we are strong.</p>
                 </div>
-                <div class="pillar-card">
+                <div class="pillar-card card-3d" data-tilt>
+                    <div class="card-shine"></div>
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <circle cx="12" cy="12" r="10"/>
@@ -153,87 +167,67 @@
         </div>
     </section>
 
-    <!-- Lead Magnet Section -->
-    <section class="code-section" id="code">
+    <!-- AR Experience Section -->
+    <section class="ar-section" id="ar-experience">
         <div class="container">
-            <div class="code-content">
-                <div class="code-text">
-                    <span class="code-badge">Free Guide</span>
-                    <h2>The Ascender's Code</h2>
-                    <p class="code-subtitle">Seven principles for those who refuse to stay down</p>
-                    <ul class="code-list">
-                        <li>The mindset that transforms setbacks into comebacks</li>
-                        <li>How to build a legacy that outlasts you</li>
-                        <li>The art of rising when everything says stay down</li>
-                        <li>Printable manifesto for your wall</li>
-                    </ul>
-                    <form class="code-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <input type="email" name="email" placeholder="Enter your email" required>
-                        <input type="hidden" name="_subject" value="New Ascender joined!">
-                        <button type="submit">Get The Code</button>
-                    </form>
-                    <p class="code-privacy">Join the founding Ascenders. Unsubscribe anytime.</p>
+            <div class="ar-content">
+                <div class="ar-visual">
+                    <div class="ar-phone-mockup">
+                        <div class="ar-screen">
+                            <div class="ar-seraph-preview">
+                                <img src="assets/images/family-emblem-ascending-seraph.png" alt="AR Seraph">
+                                <div class="ar-scan-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ar-particles"></div>
                 </div>
-                <div class="code-image">
-                    <img src="assets/images/family-emblem-ascending-seraph.png" alt="The Ascender's Code">
+                <div class="ar-text">
+                    <span class="ar-badge">Augmented Reality</span>
+                    <h2>Bring the Seraph to Life</h2>
+                    <p class="ar-description">
+                        Experience Casa Ascendente like never before. Use your phone's camera 
+                        to summon the Ascending Seraph into your world. Watch it rise, glow, 
+                        and guard your space.
+                    </p>
+                    <div class="ar-features">
+                        <div class="ar-feature">
+                            <span class="ar-feature-icon">◇</span>
+                            <span>3D Holographic Seraph</span>
+                        </div>
+                        <div class="ar-feature">
+                            <span class="ar-feature-icon">◇</span>
+                            <span>Interactive Light Effects</span>
+                        </div>
+                        <div class="ar-feature">
+                            <span class="ar-feature-icon">◇</span>
+                            <span>Place Anywhere in Your World</span>
+                        </div>
+                    </div>
+                    <a href="#" class="ar-launch-btn" id="launch-ar">
+                        <span class="btn-text">Launch AR Experience</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 5v14M5 12h14"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <p class="ar-note">Works on iOS and Android devices with camera access</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Collection Section -->
-    <section class="collection" id="collection">
-        <div class="container">
-            <h2>The Collection</h2>
-            <div class="divider"></div>
-            <p class="section-intro">Wear your legacy. Every piece carries the spirit of ascension.</p>
-            
-            <div class="collection-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <img src="assets/images/family-emblem-ascending-seraph.png" alt="Seraph Tee">
-                        </div>
-                        <span class="product-badge">Coming Soon</span>
-                    </div>
-                    <h3>The Seraph Tee</h3>
-                    <p>Premium cotton. The emblem on your chest.</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <img src="assets/images/casa-ascendente-crest.svg" alt="Ascender Hoodie">
-                        </div>
-                        <span class="product-badge">Coming Soon</span>
-                    </div>
-                    <h3>Ascender Hoodie</h3>
-                    <p>Heavy weight. Built for those who rise.</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <img src="assets/images/casa-ascendente-wordmark.svg" alt="Legacy Cap">
-                        </div>
-                        <span class="product-badge">Coming Soon</span>
-                    </div>
-                    <h3>Legacy Cap</h3>
-                    <p>Structured fit. Crown yourself.</p>
-                </div>
-            </div>
-            
-            <div class="collection-notify">
-                <p>Be first to know when the collection drops.</p>
-                <a href="#join" class="btn-secondary">Get Notified</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Emblem Section -->
-    <section class="emblem-section">
+    <!-- Immersive Emblem Section -->
+    <section class="emblem-section immersive">
+        <div class="emblem-parallax-bg"></div>
         <div class="container">
             <div class="emblem-content">
-                <div class="emblem-image">
-                    <img src="assets/images/casa-ascendente-crest.svg" alt="Casa Ascendente Crest">
+                <div class="emblem-image-wrapper">
+                    <div class="emblem-3d-container">
+                        <img src="assets/images/casa-ascendente-crest.svg" alt="Casa Ascendente Crest" class="emblem-main">
+                        <div class="emblem-reflection"></div>
+                    </div>
                 </div>
                 <div class="emblem-text">
                     <h2>The Ascending Seraph</h2>
@@ -258,7 +252,7 @@
         <div class="container">
             <div class="welcome-content">
                 <h2>You Are Welcome Here</h2>
-                <div class="divider"></div>
+                <div class="divider animated"></div>
                 <p>
                     Casa Ascendente is open to all who share our values. It doesn't matter where 
                     you come from — what matters is where you're going. If you believe in rising, 
@@ -277,7 +271,7 @@
         <div class="container">
             <div class="join-content">
                 <h2>Join the Ascenders</h2>
-                <div class="divider"></div>
+                <div class="divider animated"></div>
                 <p>
                     Become part of something greater. Get exclusive content, 
                     early access to drops, and connect with others who refuse to stay down.
@@ -288,7 +282,9 @@
                         <input type="email" name="email" placeholder="Your email" required>
                     </div>
                     <input type="hidden" name="_subject" value="New Ascender joined the movement!">
-                    <button type="submit" class="btn-primary">Ascend With Us</button>
+                    <button type="submit" class="btn-primary holographic-btn">
+                        <span>Ascend With Us</span>
+                    </button>
                 </form>
                 <p class="join-count">Join the founding Ascenders. History starts here.</p>
             </div>
@@ -308,7 +304,7 @@
                         <h4>Navigate</h4>
                         <a href="#story">Our Story</a>
                         <a href="#pillars">Our Pillars</a>
-                        <a href="#collection">Collection</a>
+                        <a href="#ar-experience">AR Experience</a>
                         <a href="#join">Join Us</a>
                     </div>
                     <div class="footer-column">
@@ -326,6 +322,36 @@
         </div>
     </footer>
 
+    <!-- AR Modal -->
+    <div class="ar-modal" id="ar-modal">
+        <div class="ar-modal-content">
+            <button class="ar-modal-close" id="close-ar">&times;</button>
+            <div class="ar-viewer">
+                <model-viewer 
+                    id="ar-model"
+                    src="assets/models/seraph.glb"
+                    alt="The Ascending Seraph"
+                    ar
+                    ar-modes="webxr scene-viewer quick-look"
+                    camera-controls
+                    auto-rotate
+                    shadow-intensity="1"
+                    environment-image="neutral"
+                    poster="assets/images/family-emblem-ascending-seraph.png"
+                    style="width: 100%; height: 100%;">
+                    <button slot="ar-button" class="ar-button">
+                        View in Your Space
+                    </button>
+                </model-viewer>
+            </div>
+            <p class="ar-instructions">Tap "View in Your Space" to place the Seraph in AR</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/immersive.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
