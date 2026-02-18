@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Casa Ascendente - The Ascending House. A family legacy that always rises.">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Casa Ascendente - The Ascending House. Join a movement of people who rise from every challenge. Ascendemos Siempre.">
+    <meta name="keywords" content="Casa Ascendente, Ascending House, family legacy, resilience, rise, movement">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Casa Ascendente | The Ascending House">
+    <meta property="og:description" content="Join a movement of people who rise from every challenge. Ascendemos Siempre — We Always Ascend.">
+    <meta property="og:image" content="assets/images/family-emblem-ascending-seraph.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Casa Ascendente | The Ascending House">
+    <meta name="twitter:description" content="Join a movement of people who rise from every challenge.">
+    
     <title>Casa Ascendente | The Ascending House</title>
     <link rel="icon" type="image/png" href="assets/images/family-emblem-ascending-seraph.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,67 +25,222 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/images/casa-ascendente-wordmark.svg" alt="Casa Ascendente">
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#code">The Code</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#join" class="nav-cta">Join Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
         <div class="hero-content">
             <img src="assets/images/family-emblem-ascending-seraph.png" alt="The Ascending Seraph" class="emblem">
             <h1 class="family-name">Casa Ascendente</h1>
             <p class="motto">"Ascendemos Siempre"</p>
             <p class="motto-translation">We Always Ascend</p>
+            <a href="#join" class="hero-cta">Join the Movement</a>
         </div>
         <div class="scroll-indicator">
             <span></span>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- Story Section -->
+    <section class="story" id="story">
         <div class="container">
-            <h2>The Ascending House</h2>
+            <div class="story-content">
+                <h2>The Ascending House</h2>
+                <div class="divider"></div>
+                <p class="lead">
+                    We are the ones who refuse to stay down. When life knocks us to our knees, 
+                    we find the strength to rise — stronger, wiser, more determined than before.
+                </p>
+                <p>
+                    Casa Ascendente is more than a family. It's a philosophy. A way of living 
+                    that honors where we came from while relentlessly reaching for what we can become. 
+                    Every generation builds on the last. Every challenge becomes a stepping stone.
+                </p>
+                <p class="highlight">
+                    This is not about perfection. It's about ascension.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section" id="values">
+        <div class="container">
+            <h2>What We Stand For</h2>
             <div class="divider"></div>
-            <p class="lead">
-                We rise from every challenge. We honor our roots while reaching higher. 
-                We build each generation stronger than the last. We never stop ascending.
-            </p>
-            <div class="values">
-                <div class="value">
+            <div class="values-grid">
+                <div class="value-card">
                     <div class="value-icon">🔥</div>
                     <h3>Resilience</h3>
-                    <p>From every fall, we rise stronger</p>
+                    <p>From every fall, we rise stronger. Adversity is not our enemy — it's our teacher.</p>
                 </div>
-                <div class="value">
+                <div class="value-card">
                     <div class="value-icon">🌳</div>
                     <h3>Heritage</h3>
-                    <p>Rooted in our past, reaching for the future</p>
+                    <p>We honor our roots. The struggles of those before us light our path forward.</p>
                 </div>
-                <div class="value">
+                <div class="value-card">
                     <div class="value-icon">⚡</div>
                     <h3>Legacy</h3>
-                    <p>Building for generations to come</p>
+                    <p>We build for generations to come. Our work today becomes their foundation tomorrow.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <h3>Protection</h3>
+                    <p>We shield what matters. Family, values, dreams — these are worth defending.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Unity</h3>
+                    <p>Together we are unbreakable. A single thread is fragile; woven together, we are strong.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">👁️</div>
+                    <h3>Vision</h3>
+                    <p>We see beyond the horizon. Today's dreams become tomorrow's reality.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Family Crest Section -->
-    <section class="crest-section">
+    <!-- Lead Magnet Section -->
+    <section class="code-section" id="code">
         <div class="container">
-            <h2>Our Emblem</h2>
+            <div class="code-content">
+                <div class="code-text">
+                    <span class="code-badge">FREE GUIDE</span>
+                    <h2>The Ascender's Code</h2>
+                    <p class="code-subtitle">7 Principles for Those Who Refuse to Stay Down</p>
+                    <ul class="code-list">
+                        <li>✦ The mindset that transforms setbacks into comebacks</li>
+                        <li>✦ How to build a legacy that outlasts you</li>
+                        <li>✦ The art of rising when everything says stay down</li>
+                        <li>✦ Printable manifesto for your wall</li>
+                    </ul>
+                    <form class="code-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <input type="hidden" name="_subject" value="New Ascender joined!">
+                        <button type="submit">Get The Code</button>
+                    </form>
+                    <p class="code-privacy">Join 0 Ascenders. Unsubscribe anytime.</p>
+                </div>
+                <div class="code-image">
+                    <img src="assets/images/family-emblem-ascending-seraph.png" alt="The Ascender's Code">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" id="collection">
+        <div class="container">
+            <h2>The Collection</h2>
             <div class="divider"></div>
-            <div class="crest-content">
-                <div class="crest-image">
+            <p class="collection-intro">Wear your legacy. Every piece carries the spirit of ascension.</p>
+            
+            <div class="collection-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <img src="assets/images/family-emblem-ascending-seraph.png" alt="Seraph Tee">
+                        </div>
+                        <span class="product-badge">Coming Soon</span>
+                    </div>
+                    <h3>The Seraph Tee</h3>
+                    <p>Premium cotton. The emblem on your chest.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <img src="assets/images/casa-ascendente-crest.svg" alt="Ascender Hoodie">
+                        </div>
+                        <span class="product-badge">Coming Soon</span>
+                    </div>
+                    <h3>Ascender Hoodie</h3>
+                    <p>Heavy weight. Built for those who rise.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <img src="assets/images/casa-ascendente-wordmark.svg" alt="Legacy Cap">
+                        </div>
+                        <span class="product-badge">Coming Soon</span>
+                    </div>
+                    <h3>Legacy Cap</h3>
+                    <p>Structured fit. Crown yourself.</p>
+                </div>
+            </div>
+            
+            <div class="collection-notify">
+                <p>Be first to know when the collection drops.</p>
+                <a href="#join" class="btn-secondary">Get Notified</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emblem Section -->
+    <section class="emblem-section">
+        <div class="container">
+            <div class="emblem-content">
+                <div class="emblem-image">
                     <img src="assets/images/casa-ascendente-crest.svg" alt="Casa Ascendente Crest">
                 </div>
-                <div class="crest-description">
-                    <h3>The Ascending Seraph</h3>
+                <div class="emblem-text">
+                    <h2>The Ascending Seraph</h2>
                     <p>
                         A golden figure rising with wings spread, halo glowing, arms open 
                         in welcome and protection. Enclosed within a circular embrace that 
                         comes to a point below — like a seed, a flame, or a soul ascending.
                     </p>
-                    <p class="established">Est. February 16, 2026</p>
+                    <p class="emblem-meaning">
+                        The Seraph represents the guardian spirit of our house. 
+                        The circle represents the world we navigate. 
+                        Together, they represent our eternal mission: to rise, to protect, to ascend.
+                    </p>
+                    <p class="established">Established February 16, 2026</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="join-section" id="join">
+        <div class="container">
+            <div class="join-content">
+                <h2>Join the Ascenders</h2>
+                <div class="divider"></div>
+                <p>
+                    This isn't a newsletter. It's a movement. Get exclusive content, 
+                    early access to drops, and connect with others who refuse to stay down.
+                </p>
+                <form class="join-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                    </div>
+                    <input type="hidden" name="_subject" value="New Ascender joined the movement!">
+                    <button type="submit" class="btn-primary">Ascend With Us</button>
+                </form>
+                <p class="join-count">Join the founding Ascenders. History starts here.</p>
             </div>
         </div>
     </section>
@@ -81,9 +248,31 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <img src="assets/images/casa-ascendente-wordmark.svg" alt="Casa Ascendente" class="footer-wordmark">
-            <p class="copyright">© 2026 Casa Ascendente. All rights reserved.</p>
-            <p class="tagline">The Ascending House</p>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/images/family-emblem-ascending-seraph.png" alt="Casa Ascendente" class="footer-emblem">
+                    <p class="footer-motto">"Ascendemos Siempre"</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigate</h4>
+                        <a href="#story">Our Story</a>
+                        <a href="#code">The Code</a>
+                        <a href="#collection">Collection</a>
+                        <a href="#join">Join Us</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Casa Ascendente. All rights reserved.</p>
+                <p class="tagline">The Ascending House</p>
+            </div>
         </div>
     </footer>
 
