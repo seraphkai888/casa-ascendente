@@ -1,0 +1,434 @@
+/* Casa Ascendente - The Sacred Chamber */
+/* Hyper-Realistic • Flying Angels • Undeniable Legacy */
+
+/* ═══════════════════════════════════════════════════════════════
+   THE CHAMBER - 3D SPACE
+   ═══════════════════════════════════════════════════════════════ */
+
+.chamber-space {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+/* Chamber Walls - Creates depth */
+.chamber-wall {
+    position: absolute;
+    border: 1px solid rgba(212, 175, 55, 0.08);
+    border-radius: 50%;
+}
+
+.chamber-wall-1 {
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    animation: chamberPulse 8s ease-in-out infinite;
+}
+
+.chamber-wall-2 {
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    bottom: 15%;
+    animation: chamberPulse 8s ease-in-out infinite 2s;
+}
+
+.chamber-wall-3 {
+    top: 25%;
+    left: 25%;
+    right: 25%;
+    bottom: 25%;
+    animation: chamberPulse 8s ease-in-out infinite 4s;
+}
+
+@keyframes chamberPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1) rotateX(60deg); }
+    50% { opacity: 0.6; transform: scale(1.05) rotateX(60deg); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FLYING ANGELS - SVG WING SHAPES
+   ═══════════════════════════════════════════════════════════════ */
+
+.flying-angel {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+}
+
+.flying-angel svg {
+    width: 100%;
+    height: 100%;
+    fill: rgba(212, 175, 55, 0.6);
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.8));
+}
+
+/* Angel Orbit Paths */
+.angel-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    animation: angelFly linear infinite;
+}
+
+.angel-orbit-1 {
+    width: 380px;
+    height: 380px;
+    margin: -190px 0 0 -190px;
+    animation-duration: 15s;
+    transform: rotateX(70deg) rotateY(10deg);
+}
+
+.angel-orbit-2 {
+    width: 320px;
+    height: 320px;
+    margin: -160px 0 0 -160px;
+    animation-duration: 12s;
+    animation-direction: reverse;
+    transform: rotateX(65deg) rotateY(-15deg);
+}
+
+.angel-orbit-3 {
+    width: 420px;
+    height: 420px;
+    margin: -210px 0 0 -210px;
+    animation-duration: 20s;
+    transform: rotateX(75deg) rotateY(5deg);
+}
+
+@keyframes angelFly {
+    from { transform: rotateX(70deg) rotateZ(0deg); }
+    to { transform: rotateX(70deg) rotateZ(360deg); }
+}
+
+.angel-orbit-1 .flying-angel { top: 0; left: 50%; transform: translateX(-50%) rotateX(-70deg); }
+.angel-orbit-2 .flying-angel { top: 50%; right: 0; transform: rotateX(-70deg); }
+.angel-orbit-3 .flying-angel { bottom: 0; left: 50%; transform: translateX(-50%) rotateX(-70deg); }
+
+/* Angel Wing Flap Animation */
+.flying-angel svg {
+    animation: wingFlap 0.3s ease-in-out infinite;
+}
+
+@keyframes wingFlap {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(0.85); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HYPER-REALISTIC LIGHTING
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Main Light Source */
+.light-source {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 223, 128, 0.1) 30%,
+        transparent 70%
+    );
+    animation: lightPulse 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 100;
+}
+
+@keyframes lightPulse {
+    0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+    50% { opacity: 1; transform: translateX(-50%) scale(1.2); }
+}
+
+/* Volumetric Light Beams */
+.volumetric-light {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 223, 128, 0.08) 0%,
+        rgba(212, 175, 55, 0.03) 50%,
+        transparent 100%
+    );
+    clip-path: polygon(40% 0%, 60% 0%, 70% 100%, 30% 100%);
+    pointer-events: none;
+    animation: volumetricPulse 6s ease-in-out infinite;
+}
+
+@keyframes volumetricPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+}
+
+/* Rim Light on Crest */
+.rim-light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 340px;
+    border-radius: 10%;
+    box-shadow: 
+        inset 0 -30px 60px rgba(212, 175, 55, 0.1),
+        inset 0 30px 60px rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    z-index: 15;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   UNDENIABLE TEXT - BOLD & CLEAR
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Hero Title - Maximum Impact */
+.family-name {
+    font-size: clamp(2rem, 7vw, 4rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase;
+    background: linear-gradient(
+        180deg,
+        #FFF8DC 0%,
+        #FFD700 20%,
+        #DAA520 50%,
+        #FFD700 80%,
+        #FFF8DC 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: 
+        drop-shadow(0 0 20px rgba(212, 175, 55, 0.8))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+    text-shadow: none !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Motto - Clear & Golden */
+.motto {
+    font-size: clamp(1.2rem, 3vw, 1.8rem) !important;
+    font-weight: 600 !important;
+    font-style: italic !important;
+    color: #FFD700 !important;
+    text-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.6),
+        0 2px 4px rgba(0, 0, 0, 0.5) !important;
+    letter-spacing: 0.1em !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Translation - Visible */
+.motto-translation {
+    font-size: clamp(1rem, 2vw, 1.3rem) !important;
+    color: rgba(255, 215, 0, 0.8) !important;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4) !important;
+    letter-spacing: 0.1em !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Section Headers */
+h2.holo-text {
+    font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2em !important;
+    background: linear-gradient(
+        180deg,
+        #FFE4A0 0%,
+        #D4AF37 50%,
+        #B8962E 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5)) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FLOATING GOLDEN FEATHERS
+   ═══════════════════════════════════════════════════════════════ */
+
+.feather {
+    position: absolute;
+    width: 20px;
+    height: 8px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent);
+    border-radius: 50%;
+    animation: featherFloat 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.feather:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; transform: rotate(30deg); }
+.feather:nth-child(2) { top: 40%; right: 15%; animation-delay: 2s; transform: rotate(-20deg); }
+.feather:nth-child(3) { top: 60%; left: 20%; animation-delay: 4s; transform: rotate(45deg); }
+.feather:nth-child(4) { top: 30%; right: 25%; animation-delay: 6s; transform: rotate(-35deg); }
+.feather:nth-child(5) { top: 70%; left: 30%; animation-delay: 8s; transform: rotate(15deg); }
+
+@keyframes featherFloat {
+    0%, 100% { 
+        transform: translateY(0) rotate(30deg);
+        opacity: 0;
+    }
+    10% { opacity: 0.6; }
+    50% { 
+        transform: translateY(-50px) rotate(45deg);
+        opacity: 0.8;
+    }
+    90% { opacity: 0.4; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GOLDEN DUST PARTICLES
+   ═══════════════════════════════════════════════════════════════ */
+
+.golden-dust {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 215, 0, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+    animation: dustFloat 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.golden-dust:nth-child(1) { top: 25%; left: 15%; animation-delay: 0s; }
+.golden-dust:nth-child(2) { top: 35%; right: 20%; animation-delay: 1s; width: 3px; height: 3px; }
+.golden-dust:nth-child(3) { top: 55%; left: 25%; animation-delay: 2s; }
+.golden-dust:nth-child(4) { top: 45%; right: 30%; animation-delay: 3s; width: 2px; height: 2px; }
+.golden-dust:nth-child(5) { top: 65%; left: 35%; animation-delay: 4s; }
+.golden-dust:nth-child(6) { top: 50%; right: 10%; animation-delay: 5s; width: 3px; height: 3px; }
+.golden-dust:nth-child(7) { top: 30%; left: 40%; animation-delay: 6s; }
+.golden-dust:nth-child(8) { top: 70%; right: 35%; animation-delay: 7s; width: 2px; height: 2px; }
+
+@keyframes dustFloat {
+    0%, 100% { 
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: translateY(-30px) translateX(10px);
+        opacity: 1;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HYPER-DETAILED CREST ENHANCEMENT
+   ═══════════════════════════════════════════════════════════════ */
+
+.hyper-crest {
+    position: relative;
+    filter: 
+        drop-shadow(0 0 5px rgba(212, 175, 55, 1))
+        drop-shadow(0 0 15px rgba(212, 175, 55, 0.9))
+        drop-shadow(0 0 30px rgba(212, 175, 55, 0.7))
+        drop-shadow(0 0 50px rgba(212, 175, 55, 0.5))
+        drop-shadow(0 0 80px rgba(212, 175, 55, 0.3))
+        contrast(1.1)
+        brightness(1.05) !important;
+    animation: hyperGlow 4s ease-in-out infinite;
+}
+
+@keyframes hyperGlow {
+    0%, 100% {
+        filter: 
+            drop-shadow(0 0 5px rgba(212, 175, 55, 1))
+            drop-shadow(0 0 15px rgba(212, 175, 55, 0.9))
+            drop-shadow(0 0 30px rgba(212, 175, 55, 0.7))
+            drop-shadow(0 0 50px rgba(212, 175, 55, 0.5))
+            contrast(1.1)
+            brightness(1.05);
+    }
+    50% {
+        filter: 
+            drop-shadow(0 0 10px rgba(255, 223, 128, 1))
+            drop-shadow(0 0 25px rgba(212, 175, 55, 1))
+            drop-shadow(0 0 50px rgba(212, 175, 55, 0.8))
+            drop-shadow(0 0 80px rgba(212, 175, 55, 0.6))
+            drop-shadow(0 0 120px rgba(212, 175, 55, 0.4))
+            contrast(1.15)
+            brightness(1.1);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .chamber-space {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .angel-orbit-1 {
+        width: 280px;
+        height: 280px;
+        margin: -140px 0 0 -140px;
+    }
+    
+    .angel-orbit-2 {
+        width: 240px;
+        height: 240px;
+        margin: -120px 0 0 -120px;
+    }
+    
+    .angel-orbit-3 {
+        width: 320px;
+        height: 320px;
+        margin: -160px 0 0 -160px;
+    }
+    
+    .flying-angel {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .rim-light {
+        width: 220px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chamber-space {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .angel-orbit-2,
+    .angel-orbit-3 {
+        display: none;
+    }
+    
+    .angel-orbit-1 {
+        width: 220px;
+        height: 220px;
+        margin: -110px 0 0 -110px;
+    }
+    
+    .feather {
+        display: none;
+    }
+    
+    .family-name {
+        font-size: clamp(1.6rem, 8vw, 2.5rem) !important;
+        letter-spacing: 0.1em !important;
+    }
+}
