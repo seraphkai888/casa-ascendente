@@ -1,0 +1,431 @@
+/* Casa Ascendente - Ultimate AR Experience */
+/* Mind-Grabbing • Immersive • Centered • Perfect */
+
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL CENTERING FIXES - ALL CRESTS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Hero Content - Perfect Center */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Hero Emblem Container - Absolute Center */
+.holo-emblem-container {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    margin: 0 auto 2rem auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+}
+
+/* Emblem Section - Perfect Center */
+.emblem-section .emblem-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.emblem-section .emblem-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.emblem-section .section-crest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.emblem-section .emblem-main {
+    display: block;
+    margin: 0 auto;
+    max-width: 320px;
+    width: 100%;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   AR-STYLE IMAGERY - FLOATING HOLOGRAM EFFECT
+   ═══════════════════════════════════════════════════════════════ */
+
+/* AR Frame around all major crests */
+.ar-frame {
+    position: relative;
+    display: inline-block;
+}
+
+.ar-frame::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    animation: arFramePulse 3s ease-in-out infinite;
+}
+
+.ar-frame::after {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -25px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 12px;
+    animation: arFramePulse 3s ease-in-out infinite 0.5s;
+}
+
+@keyframes arFramePulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+/* AR Corner Markers */
+.ar-corners {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    pointer-events: none;
+}
+
+.ar-corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: var(--gold);
+    border-style: solid;
+    border-width: 0;
+}
+
+.ar-corner-tl { top: 0; left: 0; border-top-width: 2px; border-left-width: 2px; }
+.ar-corner-tr { top: 0; right: 0; border-top-width: 2px; border-right-width: 2px; }
+.ar-corner-bl { bottom: 0; left: 0; border-bottom-width: 2px; border-left-width: 2px; }
+.ar-corner-br { bottom: 0; right: 0; border-bottom-width: 2px; border-right-width: 2px; }
+
+/* AR Tracking Lines */
+.ar-tracking {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.ar-track-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+    height: 1px;
+    width: 100%;
+    animation: trackScan 4s ease-in-out infinite;
+}
+
+.ar-track-line:nth-child(1) { top: 20%; animation-delay: 0s; }
+.ar-track-line:nth-child(2) { top: 50%; animation-delay: 1.3s; }
+.ar-track-line:nth-child(3) { top: 80%; animation-delay: 2.6s; }
+
+@keyframes trackScan {
+    0%, 100% { opacity: 0; transform: scaleX(0); }
+    50% { opacity: 1; transform: scaleX(1); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   IMMERSIVE CREST PRESENTATION
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Hero Crest - Ultimate AR Treatment */
+.holo-emblem {
+    position: relative !important;
+    width: 240px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    z-index: 10;
+    filter: 
+        drop-shadow(0 0 10px rgba(212, 175, 55, 0.8))
+        drop-shadow(0 0 25px rgba(212, 175, 55, 0.6))
+        drop-shadow(0 0 50px rgba(212, 175, 55, 0.4))
+        drop-shadow(0 0 80px rgba(212, 175, 55, 0.2));
+    animation: ultimateFloat 5s ease-in-out infinite;
+}
+
+@keyframes ultimateFloat {
+    0%, 100% { 
+        transform: translateY(0) scale(1);
+    }
+    50% { 
+        transform: translateY(-25px) scale(1.03);
+    }
+}
+
+/* Section Crest - AR Hologram Style */
+.section-crest .emblem-main {
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    filter: 
+        drop-shadow(0 0 15px rgba(212, 175, 55, 0.7))
+        drop-shadow(0 0 35px rgba(212, 175, 55, 0.5))
+        drop-shadow(0 0 60px rgba(212, 175, 55, 0.3));
+    animation: sectionFloat 6s ease-in-out infinite;
+}
+
+@keyframes sectionFloat {
+    0%, 100% { 
+        transform: translateY(0) rotateY(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotateY(3deg);
+    }
+    50% { 
+        transform: translateY(-15px) rotateY(0deg);
+    }
+    75% {
+        transform: translateY(-10px) rotateY(-3deg);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOLOGRAPHIC DEPTH LAYERS
+   ═══════════════════════════════════════════════════════════════ */
+
+.holo-depth-container {
+    position: relative;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+}
+
+.holo-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+.holo-layer-1 { transform: translateZ(10px) scale(1.02); opacity: 0.2; }
+.holo-layer-2 { transform: translateZ(20px) scale(1.04); opacity: 0.1; filter: blur(4px); }
+.holo-layer-3 { transform: translateZ(30px) scale(1.06); opacity: 0.05; filter: blur(6px); }
+
+/* ═══════════════════════════════════════════════════════════════
+   MIND-GRABBING VISUAL EFFECTS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Pulsing Energy Ring */
+.energy-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 280px;
+    border: 2px solid rgba(212, 175, 55, 0.4);
+    border-radius: 50%;
+    animation: energyExpand 3s ease-out infinite;
+}
+
+.energy-ring:nth-child(2) { animation-delay: 1s; }
+.energy-ring:nth-child(3) { animation-delay: 2s; }
+
+@keyframes energyExpand {
+    0% { 
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.8;
+        border-width: 3px;
+    }
+    100% { 
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+        border-width: 1px;
+    }
+}
+
+/* Data Points */
+.data-point {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold);
+    animation: dataPointPulse 2s ease-in-out infinite;
+}
+
+.data-point::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 50%;
+    animation: dataPointRing 2s ease-in-out infinite;
+}
+
+@keyframes dataPointPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
+}
+
+@keyframes dataPointRing {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   IMMERSIVE BACKGROUND ENHANCEMENT
+   ═══════════════════════════════════════════════════════════════ */
+
+.immersive-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background: 
+        radial-gradient(ellipse at 50% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+        radial-gradient(ellipse at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 30%),
+        radial-gradient(ellipse at 80% 60%, rgba(212, 175, 55, 0.05) 0%, transparent 30%);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE - MOBILE PERFECT CENTERING
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+    .emblem-section .emblem-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .emblem-section .emblem-image-wrapper {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+    
+    .emblem-section .emblem-text {
+        text-align: center;
+    }
+    
+    .emblem-section .emblem-text h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .holo-emblem-container {
+        width: 280px !important;
+        height: 350px !important;
+    }
+    
+    .holo-emblem {
+        width: 200px !important;
+    }
+    
+    .section-crest .emblem-main {
+        max-width: 260px !important;
+    }
+    
+    .energy-ring {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .holo-emblem-container {
+        width: 240px !important;
+        height: 300px !important;
+    }
+    
+    .holo-emblem {
+        width: 170px !important;
+    }
+    
+    .section-crest .emblem-main {
+        max-width: 220px !important;
+    }
+    
+    .energy-ring {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .ar-frame::before,
+    .ar-frame::after {
+        display: none;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOLOGRAPHIC SCAN OVERLAY
+   ═══════════════════════════════════════════════════════════════ */
+
+.holo-scan-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(212, 175, 55, 0.02) 3px,
+            rgba(212, 175, 55, 0.02) 4px
+        );
+    pointer-events: none;
+    z-index: 100;
+    animation: scanOverlay 8s linear infinite;
+}
+
+@keyframes scanOverlay {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   INTERACTIVE GLOW ON SCROLL
+   ═══════════════════════════════════════════════════════════════ */
+
+.scroll-glow-active .holo-emblem,
+.scroll-glow-active .emblem-main {
+    filter: 
+        drop-shadow(0 0 20px rgba(212, 175, 55, 1))
+        drop-shadow(0 0 40px rgba(212, 175, 55, 0.8))
+        drop-shadow(0 0 80px rgba(212, 175, 55, 0.5))
+        drop-shadow(0 0 120px rgba(212, 175, 55, 0.3)) !important;
+}
