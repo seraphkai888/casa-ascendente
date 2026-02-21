@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="350" viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="darkGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B7355"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Shield background -->
+  <path d="M150 20 L270 60 L270 180 Q270 280 150 320 Q30 280 30 180 L30 60 Z" 
+        fill="#1a1a2e" stroke="url(#gold)" stroke-width="4"/>
+  
+  <!-- Inner shield border -->
+  <path d="M150 35 L255 70 L255 175 Q255 265 150 300 Q45 265 45 175 L45 70 Z" 
+        fill="none" stroke="url(#gold)" stroke-width="1.5"/>
+  
+  <!-- Ascending Seraph figure (simplified) -->
+  <g transform="translate(150, 160)">
+    <!-- Halo -->
+    <ellipse cx="0" cy="-70" rx="25" ry="8" fill="none" stroke="url(#gold)" stroke-width="2"/>
+    
+    <!-- Head -->
+    <circle cx="0" cy="-50" r="15" fill="url(#gold)"/>
+    
+    <!-- Body -->
+    <path d="M0 -35 L-15 30 L0 50 L15 30 Z" fill="url(#gold)"/>
+    
+    <!-- Left wing -->
+    <path d="M-10 -20 Q-60 -40 -70 0 Q-60 20 -15 10" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    <path d="M-15 -10 Q-50 -25 -55 5 Q-45 20 -15 15" fill="none" stroke="url(#gold)" stroke-width="2"/>
+    
+    <!-- Right wing -->
+    <path d="M10 -20 Q60 -40 70 0 Q60 20 15 10" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    <path d="M15 -10 Q50 -25 55 5 Q45 20 15 15" fill="none" stroke="url(#gold)" stroke-width="2"/>
+    
+    <!-- Arms raised -->
+    <line x1="-8" y1="-25" x2="-35" y2="-50" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="8" y1="-25" x2="35" y2="-50" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Banner ribbon at bottom -->
+  <path d="M60 270 Q150 290 240 270 L230 295 Q150 275 70 295 Z" fill="url(#darkGold)"/>
+  
+  <!-- Motto text -->
+  <text x="150" y="288" font-family="Cinzel, serif" font-size="11" fill="#1a1a2e" text-anchor="middle" font-weight="bold" letter-spacing="1">
+    ASCENDEMOS SIEMPRE
+  </text>
+  
+  <!-- Year established -->
+  <text x="150" y="315" font-family="Cinzel, serif" font-size="10" fill="url(#gold)" text-anchor="middle">
+    EST. MMXXVI
+  </text>
+</svg>
